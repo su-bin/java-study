@@ -350,4 +350,76 @@ if ( 조건식1 ) {
 } else {
 
 }
+~~~
+####중첩 if문
+~~~
+if ( 조건식1 ) {
+    
+    if ( 조건식2 ) {
+    
+    } else {
+    
+    }
+    
+} else {
+
+}
+~~~
+#### switch문
+~~~
+switch (변수) {
+    case 값1:
+    
+        break;
+    case 값2:
+    
+        break;
+    default:
+    
+}
+~~~
 ### 반복문(for문, while문, do-while문)
+#### for문
+~~~
+for (초기화식; 조건식; 증감식) {
+    실행문;
+}
+~~~
+#### while문
+~~~
+while (조건식) {
+    실행문;
+}
+~~~
+#### do-while문
+~~~
+do {
+    실행문;
+} while (조건식);
+~~~
+#### break문
+~~~
+for (...) {
+ 
+    break;
+}
+~~~
+~~~
+while (...) {
+    
+    break;
+}
+~~~
+#### continue문
+~~~
+for (...) {
+
+    continue;
+}
+~~~
+~~~
+while (...) {
+
+    continue;
+}
+~~~
