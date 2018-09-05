@@ -2,7 +2,7 @@
 _이것이 자바다 개인 학습_
 
 ## 목차
-- [CHAPTER-01-자바-시작하기](/master/chapter01/chapter01.md)
+- [CHAPTER-01-자바-시작하기](/chapter01/chapter01.md)
 - [CHAPTER-02-변수와-타입]()
 
 ## CHAPTER-01-자바-시작하기
