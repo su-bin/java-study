@@ -3,7 +3,11 @@ _이것이 자바다 개인 학습_
 
 ## 목차
 - [CHAPTER-01-자바-시작하기](/chapter01/chapter01.md)
-- [CHAPTER-02-변수와-타입]()
+- [CHAPTER-02-변수와-타입](/chapter02/chapter02.md)
+- [CHAPTER-02-연산자](/chapter03/chapter03.md)
+- [CHAPTER-04-조건문과-반복문](/chapter04/chapter04.md)
+- [CHAPTER-05-참조-타입](/chapter05/chapter05.md)
+- [CHAPTER-06-클래스](/chapter06/chapter06.md)
 
 ## CHAPTER-01-자바-시작하기
 
@@ -278,4 +282,34 @@ int intValue = (int) double;        // intValue는 정수 부분인 3만 저장�
 #### 산술 연산자(+, -, *, /, %)
 #### 문자열 연결 연산자(+)
 #### 비교 연산자(<, <=, >, >=, ==, !=)
+~~~java
+public class StringEqualsExample {
+    public static void main(String[] args){
+      String strVar1 = "이수빈";
+      String strVar2 = "이수빈";
+      String strVar3 = new String("이수빈");
+      
+      System.out.println(strVar1 == strVar2);           // true
+      System.out.println(strVar1 == strVar3);           // false
+      System.out.println();
+      System.out.println(strVar1.equals(strVar2));      // true
+      System.out.println(strVar1.equals(strVar3));      // true
+    }
+}
+~~~
+#### 논리 연산자(&&, &#124;&#124;, &, &#124;, ^, !)
+#### 비트 연산자(&, &#124;, ^, ~, <<, >>, >>>)
+#### 대입 연산자(=, +=, -=, *=, /=, %=, &=, ^=, &#124;=, <<=, >>=, >>>=)
+
 ### 삼항 연산자
+> 조건식 ? 값 또는 연산식 : 값 또는 연산식
+
+~~~java
+public class ConditionalOperationExample {
+    public static void main(String[] args){
+      int score =85;
+      char grade = (score > 90) ? 'A' : ((score > 80 ? 'B' : 'C'));
+      System.out.println(score + "점 " + grade);
+    }
+}
+~~~
