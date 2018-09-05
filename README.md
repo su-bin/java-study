@@ -1,9 +1,9 @@
 # java-study
 _이것이 자바다 개인 학습_
 
-## 코드
-- [CHAPTER-01-자바-시작하기](#/tree/master/chapter01)
-- [CHAPTER-02-변수와-타입](#CHAPTER-02-변수와-타입)
+## 목차
+- [CHAPTER-01-자바-시작하기](/master/chapter01/chapter01.md)
+- [CHAPTER-02-변수와-타입]()
 
 ## CHAPTER-01-자바-시작하기
 
