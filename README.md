@@ -4,7 +4,7 @@ _이것이 자바다 개인 학습_
 ## 목차
 - [CHAPTER-01-자바-시작하기](/chapter01/chapter01.md)
 - [CHAPTER-02-변수와-타입](/chapter02/chapter02.md)
-- [CHAPTER-02-연산자](/chapter03/chapter03.md)
+- [CHAPTER-03-연산자](/chapter03/chapter03.md)
 - [CHAPTER-04-조건문과-반복문](/chapter04/chapter04.md)
 - [CHAPTER-05-참조-타입](/chapter05/chapter05.md)
 - [CHAPTER-06-클래스](/chapter06/chapter06.md)
@@ -313,3 +313,41 @@ public class ConditionalOperationExample {
     }
 }
 ~~~
+
+## CHAPTER-04-조건문과-반복문
+
+### 코드 실행 흐름 제어
+- 실행 흐름을 개발자가 원하는 방향으로 바꿀 수 있도록 해부는 것이 흐름제어문(제어문)이다.
+- 제어문을 사용할 경우 다양한 실행 흐름이 생성된다.
+- 제어문 블록 내부에는 또 다른 제어문을 사용할 수 있다.
+### 조건문(if문, switch문)
+#### if문
+~~~
+if ( 조건식 ) {
+    실행문;
+    실행문;
+    ...
+}
+~~~
+~~~
+if ( 조건식 )
+    실행문;
+~~~
+#### if-else문
+~~~
+if ( 조건식 ) {
+
+} else {
+
+}
+~~~
+#### if=else if-else문
+~~~
+if ( 조건식1 ) {
+
+} else if ( 조건식2 ) {
+
+} else {
+
+}
+### 반복문(for문, while문, do-while문)
