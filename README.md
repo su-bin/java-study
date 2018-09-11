@@ -515,5 +515,71 @@ int[][] scores = new int[2][3];
 ~~~
 ![다차원배열](https://t1.daumcdn.net/cfile/tistory/995BC9465B9625272F)
 
+- 일차원 배열이 서로 연결된 구조로 다차원 배열을 구현하기 때문에 수학 행렬 구조가 아닌 계단식 구조를 가질 수 있다
+~~~java
+int[][] scores = new int[2][];
+scores[0] = new int[2];
+scores[1] = new int[3];
+~~~
+
+#### 객체를 참조하는 배열
+- 기본 타입(byte, char, short, int, long, float, double, boolean) 배열은 각 항목에 직접 값을 갖고 있지만, 참조 타입(클래스, 인터페이스) 배열은 각 항목에 객체의 번지를 가지고 있다.
+~~~java
+String[] strArray = new String[3];
+strArray[0] = "java";
+strArray[1] = "C++";
+strArray[2] = "C#";
+~~~
+![객체를 참조하는 배열](https://t1.daumcdn.net/cfile/tistory/99624E3D5B974B2232)
+- String[] 배열 항목 간에 문자열을 비교하기 위해서는 == 연산자 대신 equals() 메소드를 사용해야 한다.
+
+#### 배열 복사
+- 배열은 한 번 생성하면 크기를 변경할 수 없기 때문에 더 많은 저장 공간이 필요하다면 보다 큰 배열을 새로 만들고 이전 배열로부터 항목 값들을 복사해야 한다.
+- 배열 간의 항목 값들을 복사하려면 for문을 사용하거나 System.arraycopy() 메소드를 사용하면 된다.
+~~~java
+System.arraycopy(Object src, int srcPos, Object dest, int destPos, int lengrh);
+~~~
+- 얕은 복사 (shallow copy) : 이전 항목이 참조하는 객체와 동일한 객체 참조
+- 깊은 복사 (deep copy) : 참조하는 객체도 별도로 생성
+
+#### 향상된 for문
+- 향상된 for문은 반복 실행을 하기 위해 카운터 변수와 증감식을 사용하지 않는다
+- 배열 빛 컬렉션 항목의 개수만큼 반복하고, 자동적으로 for문을 빠져나간다.
+~~~java
+for ( 타입 변수 : 배열 ) {
+    실행문;
+}
+~~~
 
 ### 열거 타입
+- 한정된 값만을 갖는 데이터 타입이 열거 타입(enumeration type)이다.
+- 열거 타입은 몇 개의 열거 상수(enumeration constant)중에서 하나의 상수를 저장하는 데이터 타입이다.
+
+#### 열거 타입 선언
+- 열거 타입 이름으로 소스 파일(.java)을 생성한다.
+- 열거 타입 이름은 소스 파일명과 대소문자가 모두 일치해야 한다.
+~~~java
+public enum Week { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }
+~~~
+#### 열거 타입 변수
+- 열거 타입도 하나의 데이터 타입이므로 변수를 선언하고 사용해야 한다.
+~~~java
+Week today;
+~~~
+- 열거 상수는 단독으로 사용할 수는 없고 반드시 열거타입.열거상수로 사용된다.
+~~~java
+Week today = Week.SUNDAY;
+~~~
+- 열거 타입도 참조 타입이다, 열거 상수는 열거 객체로 생성된다.
+
+#### 열거 객체의 메소드
+##### name() 메소드
+- name() 메소드는 열거 객체가 가지고 있는 문자열을 리턴한다.
+##### ordinal() 메소드
+- ordinal() 메소드는 전체 열거 객체 중 몇 번째 열거 객체인지 알려준다.
+##### compareTo() 메소드
+- compareTo() 메소드는 매개값으로 주어진 열거 객체를 기준으로 전후로 몇 번째 위치하는지를 비교한다.
+##### valueOf() 메소드
+- valueOf() 메소드는 매개값으로 주어지는 문자열과 동일한 문자열을 가지는 열거 객체를 리턴한다.
+##### values() 메소드
+- values() 메소드는 열거 타입의 모든 열거 객체들을 배열로 만들어 리턴한다.
